@@ -69,7 +69,8 @@ public class Game {
     }
 
     private void broadcastPlayerRolled(int pins) {
-        eventAggregator.send(currentPlayer.getName(), new PlayerRolled(currentPlayer, pins));
+        String eventGroup = currentPlayer.getName();
+        eventAggregator.send(eventGroup, new PlayerRolled(pins));
     }
 
     private void nextPlayer() {

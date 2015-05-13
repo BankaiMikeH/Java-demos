@@ -18,12 +18,16 @@ public class Frame implements EventSubscriber<PlayerRolled> {
 
     public void addRoll(int roll) {
         rolls.add(roll);
+        doMessageSubscriptions();
+    }
 
+    private void doMessageSubscriptions() {
+        String eventGroup = owner.getName();
         if(isSpare()) {
-            eventAggregator.subscribe(owner.getName(), PlayerRolled.class, this, SPARE_BONUSES);
+            eventAggregator.subscribe(eventGroup, PlayerRolled.class, this, SPARE_BONUSES);
         }
         else if(isStrike()) {
-            eventAggregator.subscribe(owner.getName(), PlayerRolled.class, this, STRIKE_BONUSES);
+            eventAggregator.subscribe(eventGroup, PlayerRolled.class, this, STRIKE_BONUSES);
         }
     }
 
@@ -39,7 +43,6 @@ public class Frame implements EventSubscriber<PlayerRolled> {
         return rolls.stream().mapToInt(Integer::intValue).sum() + bonus;
     }
 
-    @Override
     public void onEvent(PlayerRolled message) {
         bonus += message.getPins();
     }
