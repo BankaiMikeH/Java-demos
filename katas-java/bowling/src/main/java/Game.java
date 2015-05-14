@@ -60,7 +60,7 @@ public class Game {
     }
 
     public void roll(int pins) {
-        broadcastPlayerRolled(pins);
+        notifyPlayerRolled(pins);
         currentFrame.addRoll(pins);
 
         if(currentFrame.isComplete()) {
@@ -68,7 +68,7 @@ public class Game {
         }
     }
 
-    private void broadcastPlayerRolled(int pins) {
+    private void notifyPlayerRolled(int pins) {
         String eventGroup = currentPlayer.getName();
         eventAggregator.send(eventGroup, new PlayerRolled(pins));
     }
