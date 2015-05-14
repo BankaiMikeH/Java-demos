@@ -36,10 +36,11 @@ public class Game {
 
         for(Player player : players) {
             ArrayList<Frame> playerFrames = new ArrayList<>();
-            for(int i = 0; i < 10; i++) {
+            for(int i = 0; i < 9; i++) {
                 playerFrames.add(new Frame(eventAggregator, player));
             }
 
+            playerFrames.add(new TenthFrame(eventAggregator, player));
             frames.put(player, playerFrames);
         }
     }
@@ -67,11 +68,28 @@ public class Game {
         }
     }
 
-    private void nextPlayer() {
-        int nextFrameIndex = isLastPlayer() ? getNextFrameIndex() : getCurrentFrameIndex();
-        currentPlayer = isLastPlayer() ? getFirstPlayer() : getNextPlayer();
+    public boolean isComplete() {
+        for(Player player : players) {
+            for(Frame frame : frames.get(player)) {
+                if(!frame.isComplete()) {
+                    return false;
+                }
+            }
+        }
 
-        if(nextFrameIndex < 9) {
+        return true;
+    }
+
+    private void nextPlayer() {
+        int nextFrameIndex = isLastPlayer()
+            ? getNextFrameIndex()
+            : getCurrentFrameIndex();
+
+        currentPlayer = isLastPlayer()
+            ? getFirstPlayer()
+            : getNextPlayer();
+
+        if(nextFrameIndex < 10) {
             nextFrame(nextFrameIndex);
         }
     }

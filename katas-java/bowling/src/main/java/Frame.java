@@ -7,8 +7,8 @@ public class Frame implements EventSubscriber<PlayerRolled> {
 
     private EventAggregator eventAggregator;
 
-    private Player owner;
-    private List<Integer> rolls = new ArrayList<>();
+    protected Player owner;
+    protected List<Integer> rolls = new ArrayList<>();
     private int bonus;
 
     public Frame(EventAggregator eventAggregator, Player owner) {
@@ -33,16 +33,16 @@ public class Frame implements EventSubscriber<PlayerRolled> {
         }
     }
 
-    private void notifyPlayerRolled(int pins) {
+    protected void notifyPlayerRolled(int pins) {
         String eventGroup = owner.getName();
         eventAggregator.send(eventGroup, new PlayerRolled(pins));
     }
 
-    private boolean isSpare() {
+    protected boolean isSpare() {
         return rolls.size() == 2 && rolls.get(0) + rolls.get(1) == 10;
     }
 
-    private boolean isStrike() {
+    protected boolean isStrike() {
         return rolls.size() == 1 && rolls.get(0) == 10;
     }
 
