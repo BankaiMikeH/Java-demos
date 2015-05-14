@@ -4,10 +4,13 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class SimpleEventAggregatorTest {
+    private final static String PAYLOAD_MSG = "payload";
+    private final static String GROUP_NAME = "group";
+
     @Test
     public void subscribe_WithFakeSubscriber_ReceivesMessages() {
         SimpleEventAggregator messenger = new SimpleEventAggregator();
-        Subscriber subscriber = new Subscriber();
+        FakeSubscriber subscriber = new FakeSubscriber();
         messenger.subscribe(Message.class, subscriber);
 
         messenger.send(new Message());
@@ -20,7 +23,7 @@ public class SimpleEventAggregatorTest {
     @Test
     public void unsubScribe_WithFakeSubscriber_DoesNotReceiveMessage() {
         SimpleEventAggregator messenger = new SimpleEventAggregator();
-        Subscriber subscriber = new Subscriber();
+        FakeSubscriber subscriber = new FakeSubscriber();
         messenger.subscribe(Message.class, subscriber);
         messenger.unSubscribe(Message.class, subscriber);
 
@@ -32,11 +35,11 @@ public class SimpleEventAggregatorTest {
     @Test
     public void unsubScribe_WithSpecificGroup_DoesNotReceiveMessage() {
         SimpleEventAggregator messenger = new SimpleEventAggregator();
-        Subscriber subscriber = new Subscriber();
-        messenger.subscribe("testGroup", Message.class, subscriber);
-        messenger.unSubscribe("testGroup", Message.class, subscriber);
+        FakeSubscriber subscriber = new FakeSubscriber();
+        messenger.subscribe(GROUP_NAME, Message.class, subscriber);
+        messenger.unSubscribe(GROUP_NAME, Message.class, subscriber);
 
-        messenger.send("testGroup", new Message());
+        messenger.send(GROUP_NAME, new Message());
 
         assertThat(subscriber.wasMessageReceived, is(false));
     }
@@ -44,7 +47,7 @@ public class SimpleEventAggregatorTest {
     @Test
     public void subscribe_WhenSubscribingToFixedNumberOfMessages_ReceivesFixedNumberOfMessages() {
         SimpleEventAggregator messenger = new SimpleEventAggregator();
-        Subscriber subscriber = new Subscriber();
+        FakeSubscriber subscriber = new FakeSubscriber();
         messenger.subscribe(Message.class, subscriber, 1);
 
         messenger.send(new Message());
@@ -52,15 +55,16 @@ public class SimpleEventAggregatorTest {
 
         assertThat(subscriber.wasMessageReceived, is(true));
         assertThat(subscriber.timesCalled, is(1));
+        assertThat(subscriber.payload, is(PAYLOAD_MSG));
     }
 
     @Test
     public void subscribe_WhenSubscribingToGroup_ReceivesMessage() {
         SimpleEventAggregator messenger = new SimpleEventAggregator();
-        Subscriber subscriber = new Subscriber();
-        messenger.subscribe("testGroup", Message.class, subscriber);
+        FakeSubscriber subscriber = new FakeSubscriber();
+        messenger.subscribe(GROUP_NAME, Message.class, subscriber);
 
-        messenger.send("testGroup", new Message());
+        messenger.send(GROUP_NAME, new Message());
 
         assertThat(subscriber.wasMessageReceived, is(true));
     }
@@ -68,27 +72,29 @@ public class SimpleEventAggregatorTest {
     @Test
     public void subscribe_WhenSubscribingToDifferentGroup_DoesNotReceiveMessage() {
         SimpleEventAggregator messenger = new SimpleEventAggregator();
-        Subscriber subscriber = new Subscriber();
-        messenger.subscribe("test", Message.class, subscriber, 1);
+        FakeSubscriber subscriber = new FakeSubscriber();
+        messenger.subscribe(GROUP_NAME, Message.class, subscriber, 1);
 
         messenger.send(new Message());
 
         assertThat(subscriber.wasMessageReceived, is(false));
     }
 
-    public class Subscriber implements EventSubscriber<Message>
+    public class FakeSubscriber implements EventSubscriber<Message>
     {
         public boolean wasMessageReceived = false;
         public int timesCalled = 0;
+        public String payload;
 
         @Override
         public void onEvent(Message message) {
             wasMessageReceived = true;
             timesCalled++;
+            payload = message.payload;
         }
     }
 
     public class Message {
-        public String payload = "hello";
+        public String payload = PAYLOAD_MSG;
     }
 }

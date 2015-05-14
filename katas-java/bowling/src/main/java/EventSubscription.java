@@ -3,10 +3,6 @@ public class EventSubscription {
     private Integer messageCountUntilAutoUnSubscribe;
     private int messageCount;
 
-    public EventSubscription(EventSubscriber subscriber) {
-        this(subscriber, 0);
-    }
-
     public EventSubscription(EventSubscriber subscriber, int messageCountUntilAutoUnsubscribe) {
         this.subscriber = subscriber;
         this.messageCountUntilAutoUnSubscribe = messageCountUntilAutoUnsubscribe;
@@ -21,7 +17,8 @@ public class EventSubscription {
             && messageCount >= messageCountUntilAutoUnSubscribe;
     }
 
-    public void incrementTriggerCount() {
+    public void sendMessage(Object message) {
+        subscriber.onEvent(message);
         messageCount++;
     }
 }
