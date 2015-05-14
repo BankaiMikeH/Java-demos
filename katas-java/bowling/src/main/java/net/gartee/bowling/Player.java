@@ -1,3 +1,5 @@
+package net.gartee.bowling;
+
 public class Player {
 
     private String name;

@@ -1,3 +1,8 @@
+package net.gartee.bowling;
+
+import net.gartee.messaging.EventAggregator;
+import net.gartee.messaging.EventSubscriber;
+
 import java.util.ArrayList;
 import java.util.List;
 

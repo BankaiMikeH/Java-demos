@@ -1,9 +1,15 @@
+package net.gartee.messaging;
+
+import net.gartee.messaging.EventAggregator;
+import net.gartee.messaging.EventSubscriber;
+import net.gartee.messaging.EventSubscription;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.WeakHashMap;
 
-public class SimpleEventAggregator implements EventAggregator{
+public class SimpleEventAggregator implements EventAggregator {
     private final static String DEFAULT_GROUP = "default";
 
     WeakHashMap<String, WeakHashMap<String, List<EventSubscription>>> allSubscriptions = new WeakHashMap<>();

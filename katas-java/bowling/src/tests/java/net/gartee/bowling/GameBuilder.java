@@ -1,3 +1,7 @@
+package net.gartee.bowling;
+
+import net.gartee.messaging.SimpleEventAggregator;
+
 public class GameBuilder {
     Game game = new Game(new SimpleEventAggregator());
 

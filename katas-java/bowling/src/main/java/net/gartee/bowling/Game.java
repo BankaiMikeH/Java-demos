@@ -1,3 +1,7 @@
+package net.gartee.bowling;
+
+import net.gartee.messaging.EventAggregator;
+
 import java.util.*;
 
 public class Game {
@@ -31,7 +35,7 @@ public class Game {
         currentFrame = frames.get(currentPlayer).get(0);
     }
 
-    private void resetFrames() {
+    public void resetFrames() {
         frames.clear();
 
         for(Player player : players) {

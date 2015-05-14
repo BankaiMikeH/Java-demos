@@ -1,3 +1,7 @@
+package net.gartee.messaging;
+
+import net.gartee.messaging.EventSubscriber;
+import net.gartee.messaging.SimpleEventAggregator;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;

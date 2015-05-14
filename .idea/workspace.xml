@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="847cb327-74d7-4415-b152-9768da59ed9e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscription.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscription.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/katas-java/bowling/src/main/java/SimpleEventAggregator.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/SimpleEventAggregator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/katas-java/bowling/src/tests/java/SimpleEventAggregatorTest.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/tests/java/SimpleEventAggregatorTest.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\EventAggregator.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventAggregator.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\EventSubscriber.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventSubscriber.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\EventSubscription.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventSubscription.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\Frame.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Frame.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\Game.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Game.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\Player.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Player.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\PlayerRolled.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/PlayerRolled.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\SimpleEventAggregator.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/SimpleEventAggregator.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\main\java\TenthFrame.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/TenthFrame.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\tests\java\GameBuilder.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameBuilder.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\tests\java\GameTest.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameTest.java" />
+      <change type="MOVED" beforePath="C:\Dev\katas\katas-java\bowling\src\tests\java\SimpleEventAggregatorTest.java" afterPath="$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/messaging/SimpleEventAggregatorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Katas.iws" />
@@ -29,31 +38,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SimpleEventAggregator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/SimpleEventAggregator.java">
+      <file leaf-file-name="GameBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13858093">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventSubscription.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscription.java">
+      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleEventAggregatorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/SimpleEventAggregatorTest.java">
+      <file leaf-file-name="Frame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37694013">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -118,14 +127,20 @@
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventAggregator.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/PlayerRolled.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/Frame.java" />
-        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/Game.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/TenthFrame.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/tests/java/GameTest.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventGroupSubscription.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscriptionGroup.java" />
-        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/SimpleEventAggregator.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/tests/java/SimpleEventAggregatorTest.java" />
         <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscription.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscriptionMap.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/SimpleEventAggregator.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/Game.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventAggregator.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/SimpleEventAggregator.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Frame.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/messaging/SimpleEventAggregatorTest.java" />
+        <option value="$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameBuilder.java" />
       </list>
     </option>
   </component>
@@ -215,7 +230,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -234,8 +249,14 @@
               <option name="myItemId" value="Katas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FizzBuzz (tests)" />
+              <option name="myItemId" value="Katas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bowling (main)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -245,8 +266,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FizzBuzz (main)" />
+              <option name="myItemId" value="Bowling (main)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net.gartee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -530,14 +555,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleEventAggregatorTest">
+  <component name="RunManager" selected="JUnit.GameTest">
     <configuration default="false" name="SimpleEventAggregatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Bowling (tests)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SimpleEventAggregatorTest" />
+      <option name="PACKAGE_NAME" value="net.gartee.messaging" />
+      <option name="MAIN_CLASS_NAME" value="net.gartee.messaging.SimpleEventAggregatorTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -557,8 +582,8 @@
       <module name="Bowling (tests)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="PACKAGE_NAME" value="net.gartee.bowling" />
+      <option name="MAIN_CLASS_NAME" value="net.gartee.bowling.GameTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -578,8 +603,8 @@
       <module name="Bowling (tests)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="PACKAGE_NAME" value="net.gartee.bowling" />
+      <option name="MAIN_CLASS_NAME" value="net.gartee.bowling.GameTest" />
       <option name="METHOD_NAME" value="integration_WithMultiplePlayers_TracksPlayersAndFrames" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -599,8 +624,8 @@
       <module name="Bowling (tests)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="PACKAGE_NAME" value="net.gartee.bowling" />
+      <option name="MAIN_CLASS_NAME" value="net.gartee.bowling.GameTest" />
       <option name="METHOD_NAME" value="integration_FullGameWithTestData_ScoresCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -620,8 +645,8 @@
       <module name="Bowling (tests)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="PACKAGE_NAME" value="net.gartee.bowling" />
+      <option name="MAIN_CLASS_NAME" value="net.gartee.bowling.GameTest" />
       <option name="METHOD_NAME" value="integration_FullGameWithTestData_ScoresFramesCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -875,8 +900,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SimpleEventAggregatorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.GameTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GameTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SimpleEventAggregatorTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.GameTest.integration_FullGameWithTestData_ScoresFramesCorrectly" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.GameTest.integration_FullGameWithTestData_ScoresCorrectly" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.GameTest.integration_WithMultiplePlayers_TracksPlayersAndFrames" />
@@ -910,16 +935,16 @@
       <workItem from="1431526033726" duration="8000" />
       <workItem from="1431526326810" duration="14357000" />
       <workItem from="1431614882889" duration="4861000" />
-      <workItem from="1431630122491" duration="4812000" />
+      <workItem from="1431630122491" duration="5821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62649000" />
+    <option name="totallyTimeSpent" value="63658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1406" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -932,7 +957,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23967612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2112274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2112274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24976213" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -973,13 +998,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/katas-java/fizzbuzz/src/tests/java/FizzBuzzTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/katas-java/fizzbuzz/src/main/java/FizzBuzz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1220,7 +1238,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscriber.java">
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventSubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08425721">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
@@ -1234,32 +1252,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/Player.java">
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#171#172#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/PlayerRolled.java">
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/PlayerRolled.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02587646">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/GameBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028380634">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/EventAggregator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3881469">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1286,23 +1292,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/TenthFrame.java">
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/TenthFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
@@ -1310,34 +1300,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/GameTest.java">
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventSubscription.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.210526">
-          <caret line="157" column="27" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/SimpleEventAggregatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/EventSubscription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.14634146">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/SimpleEventAggregator.java">
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13858093">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/EventAggregator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/messaging/SimpleEventAggregator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/messaging/SimpleEventAggregatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54767185">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/tests/java/net/gartee/bowling/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/katas-java/bowling/src/main/java/net/gartee/bowling/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37694013">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding />
         </state>
       </provider>

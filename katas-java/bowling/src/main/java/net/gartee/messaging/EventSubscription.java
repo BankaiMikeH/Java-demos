@@ -1,3 +1,5 @@
+package net.gartee.messaging;
+
 public class EventSubscription {
     private EventSubscriber subscriber;
     private Integer messageCountUntilAutoUnSubscribe;

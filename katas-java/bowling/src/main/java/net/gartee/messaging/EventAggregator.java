@@ -1,3 +1,5 @@
+package net.gartee.messaging;
+
 import java.lang.reflect.Type;
 
 public interface EventAggregator {

@@ -1,3 +1,7 @@
+package net.gartee.bowling;
+
+import net.gartee.messaging.EventAggregator;
+
 public class TenthFrame extends Frame {
 
     public TenthFrame(EventAggregator eventAggregator, Player owner) {
