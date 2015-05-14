@@ -16,12 +16,14 @@ public class Frame implements EventSubscriber<PlayerRolled> {
         this.owner = owner;
     }
 
-    public void addRoll(int roll) {
-        rolls.add(roll);
-        doMessageSubscriptions();
+    public void addRoll(int pins) {
+        rolls.add(pins);
+
+        notifyPlayerRolled(pins);
+        subscribeToFutureRolls();
     }
 
-    private void doMessageSubscriptions() {
+    private void subscribeToFutureRolls() {
         String eventGroup = owner.getName();
         if(isSpare()) {
             eventAggregator.subscribe(eventGroup, PlayerRolled.class, this, SPARE_BONUSES);
@@ -29,6 +31,11 @@ public class Frame implements EventSubscriber<PlayerRolled> {
         else if(isStrike()) {
             eventAggregator.subscribe(eventGroup, PlayerRolled.class, this, STRIKE_BONUSES);
         }
+    }
+
+    private void notifyPlayerRolled(int pins) {
+        String eventGroup = owner.getName();
+        eventAggregator.send(eventGroup, new PlayerRolled(pins));
     }
 
     private boolean isSpare() {

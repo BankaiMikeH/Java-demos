@@ -60,17 +60,11 @@ public class Game {
     }
 
     public void roll(int pins) {
-        notifyPlayerRolled(pins);
         currentFrame.addRoll(pins);
 
         if(currentFrame.isComplete()) {
             nextPlayer();
         }
-    }
-
-    private void notifyPlayerRolled(int pins) {
-        String eventGroup = currentPlayer.getName();
-        eventAggregator.send(eventGroup, new PlayerRolled(pins));
     }
 
     private void nextPlayer() {
