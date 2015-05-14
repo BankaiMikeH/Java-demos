@@ -3,7 +3,7 @@ package net.gartee.bowling;
 import net.gartee.messaging.SimpleEventAggregator;
 
 public class GameBuilder {
-    Game game = new Game(new SimpleEventAggregator());
+    SuperFunBowling game = new SuperFunBowling(new SimpleEventAggregator());
 
     public static GameBuilder createGame() {
         return new GameBuilder();
@@ -14,7 +14,7 @@ public class GameBuilder {
         return this;
     }
 
-    public Game build() {
+    public SuperFunBowling build() {
         return game;
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class GameTest {
+public class SuperFunBowlingTest {
 
     private static final String PLAYER1 = "Player1";
     private static final String PLAYER2 = "Player2";
@@ -15,7 +15,7 @@ public class GameTest {
     @Test
     public void addPlayer_WithNewPlayer_AddsPlayer() {
 
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -24,7 +24,7 @@ public class GameTest {
 
     @Test
     public void start_WithOnePlayer_SetsUpTheGame() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -36,7 +36,7 @@ public class GameTest {
 
     @Test
     public void start_WithOnePlayer_SetsUpFrames() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -48,7 +48,7 @@ public class GameTest {
 
     @Test
     public void roll_WithSinglePlayerGameAllOnes_Scores20() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -62,7 +62,7 @@ public class GameTest {
 
     @Test
     public void roll_WithSpare_ScoresWithSpareBonus() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -76,7 +76,7 @@ public class GameTest {
 
     @Test
     public void roll_WithStrike_ScoresWithStrikeBonus() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -90,7 +90,7 @@ public class GameTest {
 
     @Test
     public void roll_WithTurkey_ScoresWithStrikeBonuses() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -106,7 +106,7 @@ public class GameTest {
 
     @Test
     public void integration_WithMultiplePlayers_TracksPlayersAndFrames() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .addPlayer(PLAYER2)
                 .build();
@@ -129,7 +129,7 @@ public class GameTest {
 
     @Test
     public void integration_FullGameWithTestData_ScoresGameCorrectly() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -152,7 +152,7 @@ public class GameTest {
 
     @Test
     public void integration_FullGameWithTestData_CompletesFrames() {
-        Game game = GameBuilder.createGame()
+        SuperFunBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -173,11 +173,11 @@ public class GameTest {
         assertThat(game.isComplete(), is(true));
     }
 
-    private Frame getFrameScore(Game game, String playerName, int frameIndex) {
+    private Frame getFrameScore(SuperFunBowling game, String playerName, int frameIndex) {
         return game.getPlayerFrames(playerName).get(frameIndex);
     }
 
-    private void rollFullGame(Game game) {
+    private void rollFullGame(SuperFunBowling game) {
         game.roll(1);
         game.roll(4);
 
