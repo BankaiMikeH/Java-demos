@@ -1,5 +1,7 @@
-package net.gartee.bowling;
+package net.gartee.bowling.superfun;
 
+import net.gartee.bowling.messages.PlayerRolled;
+import net.gartee.bowling.core.Player;
 import net.gartee.messaging.EventAggregator;
 import net.gartee.messaging.EventSubscriber;
 
@@ -9,6 +11,7 @@ import java.util.List;
 public class Frame implements EventSubscriber<PlayerRolled> {
     private static final int SPARE_BONUSES = 1;
     private static final int STRIKE_BONUSES = 2;
+    private static final String MSG_PINS_BETWEEN_0_AND_10 = "pins must be a number between 0 and 10";
 
     private EventAggregator eventAggregator;
 
@@ -22,6 +25,8 @@ public class Frame implements EventSubscriber<PlayerRolled> {
     }
 
     public void addRoll(int pins) {
+        Guard.hasLegalPinCount(pins);
+
         rolls.add(pins);
 
         notifyPlayerRolled(pins);
@@ -61,5 +66,13 @@ public class Frame implements EventSubscriber<PlayerRolled> {
 
     public boolean isComplete() {
         return isStrike() || rolls.size() == 2;
+    }
+
+    private static class Guard {
+        public static void hasLegalPinCount(int pins) {
+            if(pins < 0 || pins > 10) {
+                throw new IllegalArgumentException(MSG_PINS_BETWEEN_0_AND_10);
+            }
+        }
     }
 }

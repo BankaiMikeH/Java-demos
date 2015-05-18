@@ -1,5 +1,6 @@
-package net.gartee.bowling;
+package net.gartee.bowling.superfun;
 
+import net.gartee.bowling.util.GameBuilder;
 import org.junit.Test;
 
 import java.util.List;

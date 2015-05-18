@@ -1,4 +1,4 @@
-package net.gartee.bowling;
+package net.gartee.bowling.core;
 
 public class Player {
 

@@ -1,4 +1,6 @@
-package net.gartee.bowling;
+package net.gartee.bowling.boring;
+
+import net.gartee.bowling.core.SinglePlayerGame;
 
 public class BoringBowling implements SinglePlayerGame {
     private int[] rolls =new int[21];

@@ -1,20 +1,21 @@
-package net.gartee.bowling;
+package net.gartee.bowling.superfun;
 
+import net.gartee.bowling.core.MultiPlayerGame;
+import net.gartee.bowling.core.Player;
 import net.gartee.messaging.EventAggregator;
 
 import java.util.*;
 
-public class SuperFunBowling implements MultiPlayerGame {
-
-    private EventAggregator eventAggregator;
+public class SuperFunBowling implements MultiPlayerGame, TrackedGame {
+    public FrameFactory frameFactory;
 
     private List<Player> players = new ArrayList<>();
     private Map<Player, List<Frame>> frames = new HashMap<>();
     private Player currentPlayer;
     private Frame currentFrame;
 
-    public SuperFunBowling(EventAggregator eventAggregator) {
-        this.eventAggregator = eventAggregator;
+    public SuperFunBowling(FrameFactory frameFactory) {
+        this.frameFactory = frameFactory;
     }
 
     public int getPlayerScore(String playerName) {
@@ -37,15 +38,8 @@ public class SuperFunBowling implements MultiPlayerGame {
 
     public void resetFrames() {
         frames.clear();
-
         for(Player player : players) {
-            ArrayList<Frame> playerFrames = new ArrayList<>();
-            for(int i = 0; i < 9; i++) {
-                playerFrames.add(new Frame(eventAggregator, player));
-            }
-
-            playerFrames.add(new TenthFrame(eventAggregator, player));
-            frames.put(player, playerFrames);
+            frames.put(player, frameFactory.createFrames(player));
         }
     }
 

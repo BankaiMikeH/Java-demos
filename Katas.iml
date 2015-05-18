@@ -13,5 +13,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-junit:2.0.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:java-hamcrest:2.0.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.maven-play-plugin.com.google.code.eamelink-mockito:mockito-all:1.9.1-20110911" level="project" />
   </component>
 </module>

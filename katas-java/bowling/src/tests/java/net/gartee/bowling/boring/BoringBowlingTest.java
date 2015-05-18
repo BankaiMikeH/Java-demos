@@ -1,4 +1,4 @@
-package net.gartee.bowling;
+package net.gartee.bowling.boring;
 
 import org.junit.Test;
 

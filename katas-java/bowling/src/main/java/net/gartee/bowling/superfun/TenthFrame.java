@@ -1,5 +1,6 @@
-package net.gartee.bowling;
+package net.gartee.bowling.superfun;
 
+import net.gartee.bowling.core.Player;
 import net.gartee.messaging.EventAggregator;
 
 public class TenthFrame extends Frame {

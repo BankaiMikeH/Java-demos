@@ -22,6 +22,12 @@
             <version>2.0.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.code.maven-play-plugin.com.google.code.eamelink-mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.1-20110911</version>
+        </dependency>
+
     </dependencies>
 
 </project>

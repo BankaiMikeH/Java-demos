@@ -1,6 +1,8 @@
-package net.gartee.bowling;
+package net.gartee.bowling.superfun;
 
-public class RollConsoleWriter implements Game{
+import net.gartee.bowling.core.Game;
+
+public class RollConsoleWriter implements Game {
     private final static String MESSAGE = "A %d was rolled!";
     private Game decorated;
 

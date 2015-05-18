@@ -1,5 +1,7 @@
-package net.gartee.bowling;
+package net.gartee.bowling.superfun;
 
+import net.gartee.bowling.core.Game;
+import net.gartee.bowling.boring.BoringBowling;
 import org.junit.Before;
 import org.junit.Test;
 

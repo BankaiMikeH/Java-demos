@@ -1,4 +1,4 @@
-package net.gartee.bowling;
+package net.gartee.bowling.messages;
 
 public class PlayerRolled {
     private int pins;
