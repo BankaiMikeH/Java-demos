@@ -23,7 +23,7 @@ public class RollConsoleWriterTest {
 
     @Test
     public void roll_WithFakeGame_WritesToConsole() {
-        Game fake = new FakeGame();
+        Game fake = new MockGame();
         RollConsoleWriter game = new RollConsoleWriter(fake);
         game.roll(1);
 
@@ -38,7 +38,7 @@ public class RollConsoleWriterTest {
         assertThat(outContent.toString(), is("A 1 was rolled!"));
     }
 
-    private class FakeGame implements Game {
+    private class MockGame implements Game {
         public int timesCalled;
 
         @Override
