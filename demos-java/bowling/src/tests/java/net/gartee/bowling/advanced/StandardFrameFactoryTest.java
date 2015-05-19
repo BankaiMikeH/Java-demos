@@ -19,7 +19,7 @@ public class StandardFrameFactoryTest {
         List<Frame> frames = factory.createFrames(new Player("Adam"));
 
         assertThat(frames.size(), is(10));
-        assertTrue(frames.get(0) instanceof TenthFrame);
+        assertTrue(frames.get(9) instanceof TenthFrame);
     }
 
 }
