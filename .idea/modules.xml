@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/katas-java/bowling/src/main/Bowling (main).iml" filepath="$PROJECT_DIR$/katas-java/bowling/src/main/Bowling (main).iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/bowling/src/tests/Bowling (tests).iml" filepath="$PROJECT_DIR$/katas-java/bowling/src/tests/Bowling (tests).iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/fizzbuzz/src/main/FizzBuzz (main).iml" filepath="$PROJECT_DIR$/katas-java/fizzbuzz/src/main/FizzBuzz (main).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/bowling/src/main/Bowling (main).iml" filepath="$PROJECT_DIR$/demos-java/bowling/src/main/Bowling (main).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/bowling/src/tests/Bowling (tests).iml" filepath="$PROJECT_DIR$/demos-java/bowling/src/tests/Bowling (tests).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demos.iml" filepath="$PROJECT_DIR$/Demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/fizzbuzz/src/main/FizzBuzz (main).iml" filepath="$PROJECT_DIR$/demos-java/fizzbuzz/src/main/FizzBuzz (main).iml" />
       <module fileurl="file://$PROJECT_DIR$/FizzBuzz (main)/FizzBuzz (main).iml" filepath="$PROJECT_DIR$/FizzBuzz (main)/FizzBuzz (main).iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/fizzbuzz/src/tests/FizzBuzz (tests).iml" filepath="$PROJECT_DIR$/katas-java/fizzbuzz/src/tests/FizzBuzz (tests).iml" />
-      <module fileurl="file://$PROJECT_DIR$/Katas.iml" filepath="$PROJECT_DIR$/Katas.iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/stringcalculator/src/main/StringCalculator (main).iml" filepath="$PROJECT_DIR$/katas-java/stringcalculator/src/main/StringCalculator (main).iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/stringcalculator/src/tests/StringCalculator (tests).iml" filepath="$PROJECT_DIR$/katas-java/stringcalculator/src/tests/StringCalculator (tests).iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/wordwrap/src/main/WordWrap (main).iml" filepath="$PROJECT_DIR$/katas-java/wordwrap/src/main/WordWrap (main).iml" />
-      <module fileurl="file://$PROJECT_DIR$/katas-java/wordwrap/src/tests/WordWrap (tests).iml" filepath="$PROJECT_DIR$/katas-java/wordwrap/src/tests/WordWrap (tests).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/fizzbuzz/src/tests/FizzBuzz (tests).iml" filepath="$PROJECT_DIR$/demos-java/fizzbuzz/src/tests/FizzBuzz (tests).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/stringcalculator/src/main/StringCalculator (main).iml" filepath="$PROJECT_DIR$/demos-java/stringcalculator/src/main/StringCalculator (main).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/stringcalculator/src/tests/StringCalculator (tests).iml" filepath="$PROJECT_DIR$/demos-java/stringcalculator/src/tests/StringCalculator (tests).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/wordwrap/src/main/WordWrap (main).iml" filepath="$PROJECT_DIR$/demos-java/wordwrap/src/main/WordWrap (main).iml" />
+      <module fileurl="file://$PROJECT_DIR$/demos-java/wordwrap/src/tests/WordWrap (tests).iml" filepath="$PROJECT_DIR$/demos-java/wordwrap/src/tests/WordWrap (tests).iml" />
     </modules>
   </component>
 </project>

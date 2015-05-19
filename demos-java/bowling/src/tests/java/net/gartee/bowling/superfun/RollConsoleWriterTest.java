@@ -4,12 +4,14 @@ import net.gartee.bowling.core.Game;
 import net.gartee.bowling.boring.BoringBowling;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.when;
 
 public class RollConsoleWriterTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -36,6 +38,15 @@ public class RollConsoleWriterTest {
         game.roll(1);
 
         assertThat(outContent.toString(), is("A 1 was rolled!"));
+    }
+
+    @Test
+    public void spyTest() {
+        BoringBowling gameSpy = Mockito.spy(new BoringBowling());
+        when(gameSpy.getScore()).thenReturn(0);
+
+        gameSpy.roll(4);
+        assertThat(gameSpy.getScore(), is(0));
     }
 
     private class MockGame implements Game {
