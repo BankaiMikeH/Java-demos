@@ -4,6 +4,7 @@ import net.gartee.bowling.core.Player;
 import net.gartee.bowling.messages.PlayerRolled;
 import net.gartee.messaging.EventAggregator;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,6 +44,22 @@ public class DemoTests {
         frame.addRoll(10);
 
         verify(eventAggregator).subscribe(PLAYER_NAME, PlayerRolled.class, frame, 2);
+    }
+
+    // Mock 2 (with assert)
+    @Test
+    public void addRoll_WithStrike_SendsPlayerRolledMessage() {
+        EventAggregator eventAggregator = mock(EventAggregator.class);
+        ArgumentCaptor<String> group = ArgumentCaptor.forClass(String.class);
+        ArgumentCaptor<PlayerRolled> message = ArgumentCaptor.forClass(PlayerRolled.class);
+
+        Frame frame = new Frame(eventAggregator, new Player(PLAYER_NAME));
+        frame.addRoll(10);
+
+        // note: must capture all
+        verify(eventAggregator).send(group.capture(), message.capture());
+        assertThat(group.getValue(), is(PLAYER_NAME));
+        assertThat(message.getValue().getPins(), is(10));
     }
 
     // Spy (Wrapper / Fake)
