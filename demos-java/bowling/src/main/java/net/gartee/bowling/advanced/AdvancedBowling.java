@@ -8,10 +8,10 @@ import java.util.*;
 public class AdvancedBowling implements MultiPlayerGame, TrackedGame {
     public FrameFactory frameFactory;
 
-    private List<Player> players = new ArrayList<>();
-    private Map<Player, List<Frame>> frames = new HashMap<>();
-    private Player currentPlayer;
-    private Frame currentFrame;
+    protected List<Player> players = new ArrayList<>();
+    protected Map<Player, List<Frame>> frames = new HashMap<>();
+    protected Player currentPlayer;
+    protected Frame currentFrame;
 
     public AdvancedBowling(FrameFactory frameFactory) {
         this.frameFactory = frameFactory;
@@ -32,7 +32,7 @@ public class AdvancedBowling implements MultiPlayerGame, TrackedGame {
     public void start() {
         resetFrames();
         currentPlayer = getFirstPlayer();
-        currentFrame = frames.get(currentPlayer).get(0);
+        currentFrame = getCurrentFrame();
     }
 
     public void resetFrames() {
@@ -52,7 +52,7 @@ public class AdvancedBowling implements MultiPlayerGame, TrackedGame {
         return null;
     }
 
-    public List<Frame> getPlayerFrames(String playerName) {
+    protected List<Frame> getPlayerFrames(String playerName) {
         Player player = getPlayer(playerName);
         return frames.get(player);
     }
@@ -97,6 +97,10 @@ public class AdvancedBowling implements MultiPlayerGame, TrackedGame {
 
     private boolean isLastPlayer() {
         return players.indexOf(currentPlayer) == players.size() - 1;
+    }
+
+    protected Frame getCurrentFrame() {
+        return frames.get(currentPlayer).get(0);
     }
 
     private Player getFirstPlayer() {
