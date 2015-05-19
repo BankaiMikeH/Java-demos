@@ -1,4 +1,4 @@
-package net.gartee.bowling.superfun;
+package net.gartee.bowling.advanced;
 
 public interface TrackedGame {
     void start();

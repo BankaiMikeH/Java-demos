@@ -1,4 +1,4 @@
-package net.gartee.bowling.superfun;
+package net.gartee.bowling.advanced;
 
 import net.gartee.bowling.core.Player;
 import net.gartee.messaging.EventAggregator;

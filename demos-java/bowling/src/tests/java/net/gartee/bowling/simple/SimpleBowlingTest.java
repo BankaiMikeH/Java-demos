@@ -1,14 +1,14 @@
-package net.gartee.bowling.boring;
+package net.gartee.bowling.simple;
 
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-public class BoringBowlingTest {
+public class SimpleBowlingTest {
     @Test
     public void getScore_WithGutterGame_Returns0() {
-        BoringBowling game = new BoringBowling();
+        SimpleBowling game = new SimpleBowling();
         for(int i = 0; i < 21; i++) {
             game.roll(0);
         }
@@ -18,7 +18,7 @@ public class BoringBowlingTest {
 
     @Test
     public void getScore_WithAllOnes_Returns20() {
-        BoringBowling game = new BoringBowling();
+        SimpleBowling game = new SimpleBowling();
         for(int i = 0; i < 20; i++) {
             game.roll(1);
         }
@@ -28,7 +28,7 @@ public class BoringBowlingTest {
 
     @Test
     public void getScore_WithSpare_ReturnsScoreWithSpareBonus() {
-        BoringBowling game = new BoringBowling();
+        SimpleBowling game = new SimpleBowling();
         game.roll(5);
         game.roll(5);
         game.roll(1);
@@ -38,7 +38,7 @@ public class BoringBowlingTest {
 
     @Test
     public void getScore_WithStrike_ReturnsScoreWithStrikeBonus() {
-        BoringBowling game = new BoringBowling();
+        SimpleBowling game = new SimpleBowling();
         game.roll(10);
         game.roll(1);
         game.roll(1);
@@ -48,13 +48,13 @@ public class BoringBowlingTest {
 
     @Test
     public void getScore_WithFullGame_ReturnsCorrectScore() {
-        BoringBowling game = new BoringBowling();
+        SimpleBowling game = new SimpleBowling();
         rollFullGame(game);
 
         assertThat(game.getScore(), is(133));
     }
 
-    private void rollFullGame(BoringBowling game) {
+    private void rollFullGame(SimpleBowling game) {
         game.roll(1);
         game.roll(4);
 

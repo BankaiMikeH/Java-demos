@@ -1,7 +1,7 @@
-package net.gartee.bowling.superfun;
+package net.gartee.bowling.advanced;
 
 import net.gartee.bowling.core.Game;
-import net.gartee.bowling.boring.BoringBowling;
+import net.gartee.bowling.simple.SimpleBowling;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -34,7 +34,7 @@ public class RollConsoleWriterTest {
 
     @Test
     public void roll_WithBoringGame_WritesToConsole() {
-        RollConsoleWriter game = new RollConsoleWriter(new BoringBowling());
+        RollConsoleWriter game = new RollConsoleWriter(new SimpleBowling());
         game.roll(1);
 
         assertThat(outContent.toString(), is("A 1 was rolled!"));
@@ -42,7 +42,7 @@ public class RollConsoleWriterTest {
 
     @Test
     public void spyTest() {
-        BoringBowling gameSpy = Mockito.spy(new BoringBowling());
+        SimpleBowling gameSpy = Mockito.spy(new SimpleBowling());
         when(gameSpy.getScore()).thenReturn(0);
 
         gameSpy.roll(4);

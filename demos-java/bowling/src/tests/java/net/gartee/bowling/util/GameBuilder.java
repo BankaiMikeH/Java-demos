@@ -1,19 +1,19 @@
 package net.gartee.bowling.util;
 
 import net.gartee.bowling.core.Player;
-import net.gartee.bowling.superfun.StandardFrameFactory;
-import net.gartee.bowling.superfun.SuperFunBowling;
+import net.gartee.bowling.advanced.StandardFrameFactory;
+import net.gartee.bowling.advanced.AdvancedBowling;
 import net.gartee.messaging.SimpleEventAggregator;
 
 public class GameBuilder {
-    private SuperFunBowling game;
+    private AdvancedBowling game;
 
-    private GameBuilder(SuperFunBowling game) {
+    private GameBuilder(AdvancedBowling game) {
         this.game = game;
     }
 
     public static GameBuilder createGame() {
-        SuperFunBowling game = new SuperFunBowling(
+        AdvancedBowling game = new AdvancedBowling(
             new StandardFrameFactory(new SimpleEventAggregator()));
 
         return new GameBuilder(game);
@@ -24,7 +24,7 @@ public class GameBuilder {
         return this;
     }
 
-    public SuperFunBowling build() {
+    public AdvancedBowling build() {
         return game;
     }
 }

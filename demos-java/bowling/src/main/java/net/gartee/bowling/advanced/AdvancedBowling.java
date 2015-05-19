@@ -1,12 +1,11 @@
-package net.gartee.bowling.superfun;
+package net.gartee.bowling.advanced;
 
 import net.gartee.bowling.core.MultiPlayerGame;
 import net.gartee.bowling.core.Player;
-import net.gartee.messaging.EventAggregator;
 
 import java.util.*;
 
-public class SuperFunBowling implements MultiPlayerGame, TrackedGame {
+public class AdvancedBowling implements MultiPlayerGame, TrackedGame {
     public FrameFactory frameFactory;
 
     private List<Player> players = new ArrayList<>();
@@ -14,7 +13,7 @@ public class SuperFunBowling implements MultiPlayerGame, TrackedGame {
     private Player currentPlayer;
     private Frame currentFrame;
 
-    public SuperFunBowling(FrameFactory frameFactory) {
+    public AdvancedBowling(FrameFactory frameFactory) {
         this.frameFactory = frameFactory;
     }
 

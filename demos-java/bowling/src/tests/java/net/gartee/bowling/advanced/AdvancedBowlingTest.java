@@ -1,4 +1,4 @@
-package net.gartee.bowling.superfun;
+package net.gartee.bowling.advanced;
 
 import net.gartee.bowling.util.GameBuilder;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class SuperFunBowlingTest {
+public class AdvancedBowlingTest {
 
     private static final String PLAYER1 = "Player1";
     private static final String PLAYER2 = "Player2";
@@ -16,7 +16,7 @@ public class SuperFunBowlingTest {
     @Test
     public void addPlayer_WithNewPlayer_AddsPlayer() {
 
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -25,7 +25,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void start_WithOnePlayer_SetsUpTheGame() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -37,7 +37,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void start_WithOnePlayer_SetsUpFrames() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -49,7 +49,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void roll_WithSinglePlayerGameAllOnes_Scores20() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -63,7 +63,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void roll_WithSpare_ScoresWithSpareBonus() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -77,7 +77,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void roll_WithStrike_ScoresWithStrikeBonus() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -91,7 +91,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void roll_WithTurkey_ScoresWithStrikeBonuses() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -107,7 +107,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void integration_WithMultiplePlayers_TracksPlayersAndFrames() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .addPlayer(PLAYER2)
                 .build();
@@ -130,7 +130,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void integration_FullGameWithTestData_ScoresGameCorrectly() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -153,7 +153,7 @@ public class SuperFunBowlingTest {
 
     @Test
     public void integration_FullGameWithTestData_CompletesFrames() {
-        SuperFunBowling game = GameBuilder.createGame()
+        AdvancedBowling game = GameBuilder.createGame()
                 .addPlayer(PLAYER1)
                 .build();
 
@@ -174,11 +174,11 @@ public class SuperFunBowlingTest {
         assertThat(game.isComplete(), is(true));
     }
 
-    private Frame getFrameScore(SuperFunBowling game, String playerName, int frameIndex) {
+    private Frame getFrameScore(AdvancedBowling game, String playerName, int frameIndex) {
         return game.getPlayerFrames(playerName).get(frameIndex);
     }
 
-    private void rollFullGame(SuperFunBowling game) {
+    private void rollFullGame(AdvancedBowling game) {
         game.roll(1);
         game.roll(4);
 
